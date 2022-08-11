@@ -1,0 +1,76 @@
+body {
+	font-family: sans-serif ;
+	background: #000000 ;
+	color: #ccc ;
+}
+
+main {
+	max-width: 800px ;
+	margin: auto ;
+}
+
+img {
+	max-width: 100% ;
+}
+
+header h1 {
+	text-align: center ;
+}
+
+footer {
+	text-align: center ;
+	clear: both ;
+}
+
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a.back {
+    float: right;
+    font-size: 0.8em;
+    padding: 0 0.4em;
+}
+
+.index ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    font-family: monospace;
+    font-size: 1.6em;
+    line-height: 2.4em;
+}
+
+.page-index ul {
+	    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style-type: none;
+        font-family: monospace;
+        font-size: 1.6em;
+        line-height: 2.4em;
+                                            
+}
+.page-index ul li {
+	    display: inline-block;
+        margin: 0 1em;
+			
+}
+
+/* For TAGLIST.HTML */
+.taglist {
+	text-align: center ;
+	clear: both ;
+}
+

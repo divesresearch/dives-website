@@ -1,0 +1,14 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'dives'
+
+[languages]
+    [languages.en]
+        contentDir = 'content/english'
+        languageName = 'EN'
+        weight = 10
+    [languages.tr]
+        contentDir = 'content/turkce'
+        languageName = 'TR'
+        weight = 20
