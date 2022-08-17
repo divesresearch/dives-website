@@ -8,10 +8,10 @@ draft: false
 
 Dives Research is an organization that mainly focuses on analyzing blockchain
 ecosystems and the financial markets. Although the crypto trend over the recent
-years has taken the attention of the masses, it created huge trends with tons of
-projects that lack proper ideas and solutions. Instead of blindly jumping on
-these trends, we aim to create detailed and specific publications that result
-from deep research of the concerning ideas.
+years has taken the attention of the masses, it created huge trends with tons
+of projects that lack proper ideas and solutions. Seperating good projects from
+the bad ones is important more than ever, thus we aim to create detailed and
+specific publications that result from deep research of the concerning ideas.
 
 # **Who are We**
 
@@ -30,32 +30,39 @@ these activities mainly includes:
 
 # **Our Philosophy**
 Since it is easy to get carried away without proper principles in the crypto
-ecosystem, we sincerely believe every investor should act in line with a certain
-philosophy. Thus, we embrace the following principles:
+ecosystem, we sincerely believe every investor should act in line with a
+certain philosophy. This applies to content-creators and developers as well as
+they affect masses through their products. 
+
+As Dives Research, we embrace the following principles:
 
 **Sustainability over hype:** As blockchain ecosystems are in rapid-continuous
 development, filtering projects and spotting the ones with promising long-term
 ideas is as important as analyzing the latest significant technologies and
-projects in this field. Rather than benefiting from short-term projects, we
+projects in this field. Rather than just benefiting from short-term projects, we
 value the ideas that have the potential to create impactful solutions in the
-long-term.
+**long-term**.
 
-**Simplicity:** Few crypto projects involve a complexity inherent to their
-nature, but most seem to inherit a complexity that is more than required. As the
-number of dependencies and layers in a project increases, so does the
-probability of the occurrence of a problem increases. Thus, we are going to
-align ourselves with simplicity while researching projects and avoid
-overcomplexity in the content we create.
+**Simplicity:** Few crypto projects involve a complexity inherent to
+their nature, but most seem to inherit a complexity that is more than
+required (see [complexity][complexity]). As the number of dependencies 
+and layers in a project increases, so does the probability of the 
+occurrence of a problem. We value simple solutions over complex ones, we 
+see value in being able to understand the tools that are important for 
+this ecosystem to perform. We want to simplify things.
 
 **Risk Taking and Management:** We are not afraid of taking risks, but we also
 think it is stupid to underestimate the risks involving crypto. Understanding
 and acting in accordance with a good understanding of concepts such as Portfolio
-Management, Risk Reward Ratios are crucial for success as well as good research.
+Management, Risk Reward Ratios are crucial for success as well as good 
+research. Do not expect from us to share crypto "insights" for your 
+shitcoins.
 
 **Openness:** Different actors such as financial markets, central banks, and the
-crypto sector correlate. This creates different opportunities in different
-fields. Thus, we do not restrict ourselves to specific areas to analyze the
-market as a whole and evaluate different types of opportunities.
+crypto sector relate with each other. This creates different 
+opportunities in many fields. Hence, we do not like to restrict 
+ourselves to specific domains, instead we tend to analyze the market as 
+a whole while evaluating different types of opportunities.
 
 **Transparency:** Most projects dedicate their marketing and strategy
 departments to this specific task of hyping people up and taking advantage of
