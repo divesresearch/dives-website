@@ -1,0 +1,19 @@
+{{ partial "header.html" . -}}
+<header><h1 id="tag_{{ .Title }}">{{ .Title | title }}</h1></header>
+{{ partial "back.html" . }}
+<article>
+{{ .Content -}}
+<ul>
+{{- range.Pages }}
+<a href="{{ .RelPermalink }}">{{ .Params.Fullname }} ({{ .Title }})</a> <br>
+ <div style="padding-left: 50px;">    
+    {{ .Content }}
+        {{ range $key, $value := (.Params.sites) }}
+                {{ $key }} : {{ $value }} <br>
+        {{ end }} 
+    {{ end -}}
+
+ </div>
+</ul>
+</article>
+{{- partial "footer.html" . }}

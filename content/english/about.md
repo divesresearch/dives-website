@@ -2,6 +2,7 @@
 title: "About"
 date: 2022-08-11T17:39:12+03:00
 draft: false
+authors: [ugur, giray]
 ---
 
 # **Introduction**
