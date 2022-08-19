@@ -1,9 +1,14 @@
-{{ partial "taglist.html" . -}}
-</article>
 </main>
 <footer>
-    <!-- fill here -->
-    <a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a><br><br>
+    <!-- home redirection  -->
+    <!-- <a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a><br><br> -->
+    <!-- list authors -->
+    {{ if isset .Params "authors" }} 
+        <b> Author(s) </b> </br>
+        {{ range .Params.Authors }} 
+        <a href="/members/{{ . }}">{{ . }}</a> <br>
+        {{ end }}
+    {{ end }} 
 </footer>
 </body>
 </html>
