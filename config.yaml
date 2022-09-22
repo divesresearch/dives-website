@@ -1,0 +1,20 @@
+baseURL: 'https://dives.fyi'
+languageCode: 'en-us'
+title: 'Dives Research'
+theme: 'dives2'
+
+
+languages:
+  en:
+    contentDir: 'content/english'
+    languageName: 'EN'
+    weight: 10
+  tr:
+    contentDir: 'content/turkce'
+    languageName: 'TR'
+    weight: 20
+
+menu:
+  main:
+    - name: 'Blog'
+      url: 'blog'

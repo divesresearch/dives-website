@@ -1,6 +1,6 @@
 ---
 title: ugur
-fullname: Ugur Erdem Seyfi
+fullname: "Ugur Erdem Seyfi"
 sites: 
     github: "@kugurerdem"
     twitter: "@kugurerdem"

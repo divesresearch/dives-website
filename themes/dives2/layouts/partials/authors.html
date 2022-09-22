@@ -1,0 +1,29 @@
+{{ if isset .Params "authors" }} 
+    {{ range .Params.Authors }} 
+    <div class="author-bar">
+        {{ $memberPATH := printf "/members/%s" . | printf "%s"}} 
+        {{ with $.Site.GetPage $memberPATH }} 
+        {{ $authorPage := printf "https://twitter.com/%s" .Params.Sites.Twitter
+        }}
+        <a href="{{ $authorPage }}"
+            ><img
+              class="author-bar-photo"
+              src="/img/{{ .Params.Title }}.jpg"
+              alt="{{ .Params.Title }}"
+          /></a>
+
+        <a href="{{ $authorPage }}"> {{ .Params.FullName }} </a>
+
+          <p class="author-description">
+            {{ .Params.description }}            
+          </p>
+          <div class="author-buttons">
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        {{ end }}
+    </div>
+    {{ end }}
+{{ end }} 
+
+</div>

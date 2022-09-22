@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dives Research</title>
+        <link rel="stylesheet" href="https://dives.fyi/style.css?v=<?= filemtime('mycss.css') ?>" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    </head>
+    <body>
+    <header class="main-header">
+    <h1 class="home-logo"><a href="https://dives.fyi"> Dives Research</a></h1>
+
+    <nav>
+        
+        <a href="/blog">Blog</a>
+        
+    </nav>
+</header>
+
+    <div class="container">
+        <article>
+            <h1 class="title"> Calculating Curve IL </h1>
+            
+            <h1 id="calculating-impermanent-loss-on-curves-stableswap-pools">Calculating Impermanent Loss on Curve’s StableSwap Pools</h1>
+<p>o kadar il calculator var curve için yok arkadaş, biz de bunu yaptık. aha linki de burada. Nasıl yağtığımız da aşağıda. bu arada biz dives research&rsquo;üz.</p>
+<h2 id="1-what-is-impermanent-loss">1. What is Impermanent Loss?</h2>
+<p>Impermanent loss is one of the risks of being a liquidity provider in certain DeFi protocols. It is the difference between the value the tokens would have if you provided liquidity and the value the tokens would have if you held them without providing liquidity.</p>
+<p>When you provide liquidity to a pool, you allow people to trade between the assets you have provided. When the value of an asset increases, people will use your liquidity to buy that asset. Therefore, the amount of the asset that gained value will decrease, while the amount of the asset that lost value will increase. This means the combined value of the assets would be higher if they were not in a liquidity pool. Therefore whenever a price change occurs, there will be an impermanent loss.</p>
+<h2 id="2-how-to-calculate-it">2. How to Calculate It?</h2>
+<p>Let us also explain it with an example. Suppose that you have two tokens, A and B. Right now, A’s value is $1, and B’s is $2. You have 50 A and 25 B. You provide liquidity to the A-B pool on Uniswap.</p>
+<p>When the value of A increases to $2, people will use your liquidity to buy more A. Therefore, you will have less A. We can calculate the amount of A you will have as follows:</p>
+<p>$amount_A * amount_B = k$ where $k$ is a constant.
+Initially, $amount_A = 50$, and $amount_B = 25$. Therefore $k = 1250$
+When $price_A = 2$, the pool will balance at $amount_A = amount_B$ because they have the same price now.
+Therefore $amount_A = amount_B = \sqrt{1250} \approx 35.35$
+This means that after the price change, we will have approximately 35 A and 35
+B. Multiplying the tokens with the price of 2 USD, we will have
+approximately 141 USD  worth of assets. If we held the tokens separately, we
+would have 50 A and 25 B, making 150 USD worth of assets. The difference, 9 USD, is the impermanent loss.</p>
+<h2 id="3-what-about-curves-stableswap-pools">3. What About Curve’s StableSwap Pools?</h2>
+<p>As we have seen, to calculate the impermanent loss, we need to calculate two things:</p>
+<p>(1)The value of tokens if they were not deposited into the pool
+(2)The value of tokens if they were deposited into the pool</p>
+<p>Calculating (1) is simple. Calculating (2) is not so much.</p>
+<p>In a regular Uniswap liquidity pool, the relation between the prices and the amounts of tokens in the pool is simple. Token A’s price in terms of Token B equals the amount of Token B divided by the amount of Token A. For instance, if there are 10k A and 20k B tokens, A’s price in terms of B is 2. So you need to pay 2 B to get 1 A.</p>
+<p>Curve pools do not work the same way. The relation between the prices and the token amounts is more complex. For instance, currently (30 August 2022), the amounts of tokens in Curve’s stETH - ETH pool is as follows:</p>
+<p>ETH: 218,369.41 (27.25%)
+stETH: 583,116.99 (72.75%)</p>
+<p>But the exchange rate of ETH/stETH is 1.02783752.</p>
+<p>So we need to find a way to derive the ratio of token amounts from the ratio of prices. How can we do that?</p>
+<h2 id="4-understanding-curves-stableswap-invariant">4. Understanding Curve’s StableSwap Invariant</h2>
+<p>We need to find the relation between the amounts of tokens and the prices of tokens. To do that, we have to look at how Curve’s StableSwap calculates prices. Curve uses the following formula to calculate the exchange rate of the tokens in a StableSwap liquidity pool:</p>
+<p>$A*n^n \sum_{i}x_i + D = A * D *n^n + \frac{D^{(n+1)}}{n^n\prod_i{x_i}}$</p>
+<p>This is the most general form of the formula. We will examine only the pools with two tokens in them.
+$n$ is the number of tokens in the pool. So we set $n = 2$.
+$x_i$  is the amount of the $i$-th token. Since we are dealing with the pools that have two tokens, we have $x_1$  and $x_2$. So, the formula for a two-token StableSwap pool looks like this:</p>
+<p>$A<em>2^2 (x_1+x_2) + D = A</em>D*2^2 + \frac{D^{2+1}}{2^2 x_1 x_2}$,
+equivalently,
+$4A(x_1+x_2) + D = 4AD + \frac{D^3}{4x_1x_2}$ (1)</p>
+<p>$D$ and $A$ are constants. $D$ is similar to the constant $k$ in Uniswap pools. It is defined as the total amount of tokens in the pool when the pool is balanced. Unless there is a deposit to or a withdrawal from the pool, $D$ does not change, just like $k$ in Uniswap.</p>
+<p>The important thing is that the ratio of x1 and x2 in a pool does not depend on D. We can see this by creating a graph of this simplified equation. In this graph, changing D moves the graph on the x = y line, but it does not change the shape of the curve.</p>
+<p><img src="https://media.giphy.com/media/Osi9vlm6C9nPD6zzbm/giphy.gif" alt=""></p>
+<p>For a more rigorous demonstration, suppose we multiply D with a constant v.
+$4A(x_1+x_2) + Dv = 4A(Dv) + \frac{(Dv^{3})}{4x_1x_2}$ (2)
+Take any $x_1$, $x_2$ that satisfies the equation <strong>(1)</strong>
+We can show that $vx1$, $vx2$ satisfy <strong>(2)</strong>:
+$4A(vx1+vx2) + Dv=4A(Dv) + \frac{(Dv^{3})}{4vx_1vx_2}$
+Equivalently,
+$v <em>(4A(x_1+x_2) + D) = v</em>(4AD + \frac{D^{3}}{4x_1x_2})$
+When we simplify by dividing both sides by $v$, we get the equation <strong>(1)</strong>. We know $x_1$, $x_2$ satisfy <strong>(1)</strong>, therefore $vx_1$, $vx_2$ satisfy <strong>(2</strong>).</p>
+<p>We have seen that when we multiply $D$ with a constant, $x_1$ and $x_2$ values multiplied by the same constant satisfy the equation. Therefore the whole curve is multiplied by the same constant. So, $D$ does not define the distribution of the pool. This means when we want to calculate the ratio of $x_1$ and $x_2$, the value of $D$ is not important. Therefore, we can set $D = 1$ to make the calculations easier. So, we have the following formula:
+$4A(x_1+x_2) + 1 = 4A +\frac{1}{4x_1x_2})$</p>
+<p>Lastly, $A$ is the defining constant of the pool. It determines the shape of the curve. When $A = 0$, the StableSwap pool works exactly like a Uniswap pool. When we make $A$ greater, the middle of the curve gets straightened. We can see this in the following chart:</p>
+<p><img src="https://media.giphy.com/media/LVYuej8rk9aHbPlMZf/giphy.gif" alt=""></p>
+<p>For a more detailed understanding of how the StableSwap formula works, refer to <a href="https://curve.fi/files/stableswap-paper.pdf">Curve’s StableSwap Paper</a>.</p>
+<h2 id="5-how-price-is-calculated-on-stableswap">5. How Price is Calculated on StableSwap</h2>
+<p>For now, what we need to understand is how to calculate the price using this formula. As you may realize, once we set $A$, $D$, and $n$, we are left with a formula with two unknowns: $x_1$  and $x_2$ . This means we can treat $x_2$ as a function of $x_1$. Let $y(x_1) = x2$, and let $x = x_1$. We want to calculate the ratio of the change in $y$ to change in $x$, which will give us the relative price of the tokens in the pool.</p>
+<p>Suppose that $x = a$, meaning that the amount of the first token in the pool is $a$. Therefore, the amount of the second token in the pool is $y(a)$. How can we calculate the exchange rate between these two tokens? Suppose we have $h$ amount of the first token, and we want to exchange it for the second token. We can add $h$ to $a$, so $x = a + h$, calculate $y(a + h)$, and get the difference between $y(a + h)$ and $y(a)$. This gives the change in the amount of the second token in the pool, which is the amount that we receive in exchange. So we can calculate $\frac{y(a + h) - y(a)}{h}$, which gives the exchange rate for $h$ amount of the first token.
+If we want to calculate the exact price at $x = a$, we should take the limit of this ratio as $h$ approaches 0.
+$\lim_{h \to 0} \frac{y(a + h) - y(a)}{h}$
+This limit is the definition of the derivative! This means the price at an exact point in the curve is the absolute value of the curve’s derivative at that point. We need the absolute value because this derivative is always negative.</p>
+<p><img src="https://i.ibb.co/sy0rnt7/final1.png" alt=""></p>
+<h2 id="6-calculating-impermanent-loss-on-stableswap-pools">6. Calculating Impermanent Loss on StableSwap Pools</h2>
+<p>Now we know that the price at a point in the curve is the absolute value of the derivative at that point. As a reminder, our simplified StableSwap invariant looks like this:
+$4A(x+y) + 1 = 4A + \frac{1}{4xy}$
+So, if we take the derivative of the simplified StableSwap invariant, we get:</p>
+<p>$4A(y&rsquo; + 1) + \frac{1}{4}(\frac{1}{x^{2}y} + \frac{y&rsquo;}{y^{2}x})= 0$
+$y&rsquo;$ is the price of $x$ in terms of $y$, with a negative sign.</p>
+<p>As discussed in <strong>3</strong>, we need to find a way to derive the ratio of the tokens in the pool from the price of the tokens. We now have the derivative and simplified StableSwap formulas, so we have two equations with the unknowns $x$ and $y$. This means when we set $y&rsquo;$, we can calculate $x$ and $y$ values that satisfy both equations. Therefore we can calculate the ratio of the tokens in the pool.</p>
+<p>Instead of solving the equations, we can calculate the intersection of the two equations with whatever precision we want. Finding this intersection is what our calculator does. After finding the values $x$ and $y$, we can easily calculate the impermanent loss.</p>
+<p>Suppose we want to calculate the impermanent loss in a StableSwap pool. We have two relative prices: $initial_price$ and $final_price$. If we deposit our tokens when the price is $initial_price$, and the price changes to $final_price$, how much is the impermanent loss?</p>
+<p>We can calculate the values of tokens if they are not deposited to the pool by calculating $x_initial_price$ (the amount of the first token when the price is initial_price) and $y_initial_price$ (the amount of the second token when the price is initial_price). Then we can calculate $value_1 = x_initial_price * final_price + y_initial_price$.</p>
+<p>We can also calculate the values of tokens if they are deposited into the pool. We first calculate $x_final_price (the amount of the first token when the price is $final_price$) and $y_final_price$ (the amount of the second token when the price is $final_price$). Then we calculate $value_2 =x_final_price * final_price + y_final_price$.</p>
+<p>And the impermanent loss is $\frac{value_1 - value_2}{value_1}$.</p>
+</article>
+
+        <aside> 
+             
+     
+    <div class="author-bar">
+         
+         
+        
+        <a href="https://twitter.com/@excerebri"
+            ><img
+              class="author-bar-photo"
+              src="/img/ibrahim.jpg"
+              alt="ibrahim"
+          /></a>
+
+        <a href="https://twitter.com/@excerebri"> İbrahim Karakoç </a>
+
+          <p class="author-description">
+            Co-founder of Dives Research            
+          </p>
+          <div class="author-buttons">
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        
+    </div>
+     
+    <div class="author-bar">
+         
+         
+        
+        <a href="https://twitter.com/@followgray_"
+            ><img
+              class="author-bar-photo"
+              src="/img/giray.jpg"
+              alt="giray"
+          /></a>
+
+        <a href="https://twitter.com/@followgray_"> Giray Demirel </a>
+
+          <p class="author-description">
+                        
+          </p>
+          <div class="author-buttons">
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        
+    </div>
+    
+ 
+
+</div>
+
+        </aside>
+    </div>
+
+    <footer> </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+    </body>
+</html>
+

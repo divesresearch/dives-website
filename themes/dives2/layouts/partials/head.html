@@ -1,0 +1,6 @@
+<head>
+    <meta charset="UTF-8" />
+    <title>Dives Research</title>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/style.css" />
+    {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
+</head>

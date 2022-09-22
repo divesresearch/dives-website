@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dives Research</title>
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/style.css?v=<?= filemtime('mycss.css') ?>" />
+    </head>
+    <body>
+    {{ partial "header.html" . }}
+    <div class="container">
+        <article>
+            {{ .Content -}}
+            <ul>
+            {{- range.Pages }}
+                <li><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time> &ndash; <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end -}}
+            </ul>
+        </article>
+    </div>
+
+    <footer> </footer>
+    </body>
+</html>

@@ -1,18 +1,23 @@
 {{ partial "header.html" . -}}
+{{ partial "nav.html" . }}
 <header><h1>{{ .Title }}</h1></header>
 <article>
-{{ partial "back.html" . }}
 {{ .Content -}}
 </article>
-<!-- written articles --> 
-{{ partial "footer.html" . }}
 
+<!-- written articles --> 
 <footer>
-<b> Articles Written </b> <br>
+    <b> Articles Written </b> <br> 
 {{ range .Site.Pages }}
     {{ if isset .Params "authors" }}
         {{ if in .Params.Authors $.Page.Params.Title }} 
-        <li> <a href="{{ .RelPermalink }}"> {{ .Title }} </a> </li>
+	<li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        &ndash; 
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ .Date.Format "2006 Jan 02" }}
+        </time> 
+    </li>
         {{ end }}
     {{ end }}
 {{ end }}

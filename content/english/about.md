@@ -1,8 +1,9 @@
 ---
-title: "About"
+title: "Introducing Dives Research"
 date: 2022-08-11T17:39:12+03:00
 draft: false
 authors: [ugur, giray]
+thumbnail: '/img/thumb-1920-573305.jpg'
 ---
 
 # **Introduction**

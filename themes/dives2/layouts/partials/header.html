@@ -1,0 +1,9 @@
+<header class="main-header">
+    <h1 class="home-logo"><a href="{{.Site.BaseURL }}"> Dives Research</a></h1>
+
+    <nav>
+        {{ range .Site.Menus.main }}
+        <a href="{{$.Site.Params.baseURL}}/{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+    </nav>
+</header>

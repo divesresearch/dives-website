@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dives Research</title>
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/style.css?v=<?= filemtime('mycss.css') ?>" />
+        {{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
+    </head>
+    <body>
+    {{ partial "header.html" . }}
+    <div class="container">
+        <article>
+            <h1 class="title"> {{ .Params.Title }} </h1>
+            {{ if isset .Params "thumbnail"}}
+            <img src="{{ .Params.thumbnail }}" class="welcome-img"/>
+            {{ end }}
+            {{ .Content -}}
+        </article>
+
+        <aside> 
+            {{ partial "authors.html" . }}
+        </aside>
+    </div>
+
+    <footer> </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ]
+            });
+        });
+    </script>
+    </body>
+</html>
+
