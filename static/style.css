@@ -94,8 +94,6 @@ nav a:link:last-child {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 8fr 3fr;
   gap: 1rem;
   margin: auto;
   max-width: 120rem;
@@ -169,7 +167,6 @@ a:visited {
 }
 
 .author-box {
-  display: flex;
   align-items: center;
   margin: 0;
   margin-bottom: 1rem;
@@ -184,9 +181,13 @@ a:visited {
 }
 
 .author-description {
+  margin-top: 1rem;
   text-align: center;
 }
 
+blockquote {
+    padding-left: 5rem;
+}
 /* Sağdaki Author Bölmesi */
 
 aside {
@@ -197,7 +198,6 @@ aside {
   position: sticky;
   align-self: start;
   top: 8rem;
-  display: grid;
   gap: 2rem;
   background-color: rgb(241, 225, 197);
 }
@@ -212,9 +212,12 @@ aside a {
 }
 
 .author-bar {
-  display: grid;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 33%;
   padding: 1rem;
-  gap: 0.8rem;
+  vertical-align: top;
+  margin-top: 3rem; 
   justify-items: center;
   background-color: rgb(248, 239, 224);
   border-radius: 1rem;
@@ -224,6 +227,8 @@ aside a {
 .author-bar-photo {
   width: 8rem;
   border-radius: 50%;
+  display: block;
+  float: right;
 }
 
 .author-buttons {
@@ -250,4 +255,17 @@ aside a {
 
 img {
     max-width: 100%;
+    border-radius: 1rem;
+}
+
+img[src*='#center']{
+  display: block;
+  margin: 1.0rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+img[src*=resize-half]{
+    width: 50%;
+    height: auto;
 }

@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <title>Dives Research</title>
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}/style.css?v=<?= filemtime('mycss.css') ?>" />
+        <link 
+            rel="stylesheet" 
+            href="{{ .Site.BaseURL }}/style.css?v=<?=filemtime('style.css') ?>"
+        />
         {{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
     </head>
     <body>

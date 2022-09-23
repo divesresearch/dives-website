@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: neue;
   src: url(fonts/NeueHaasDisplayRoman.woff2);
@@ -7,7 +6,9 @@
   font-family: neue-l;
   src: url(fonts/NeueHaasDisplayMediu.woff2);
 }
-
+html {
+  font-size: 67.5%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@ h4 {
 }
 
 h1 {
-  padding-left: 20px;
+  padding-left: 2rem;
 }
 
 p,
@@ -32,17 +33,40 @@ a {
   font-family: neue;
 }
 
+.main-header {
+  background-color: #212121;
+  padding: 8px;
+  text-align: left;
+  text-transform: capitalize;
+  color: #f8efe0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header a {
+  font-size: 1.6rem;
+}
+
 nav a {
-  padding-right: 25px;
+  padding-right: 2.5rem;
 }
 body {
-  padding-top: 100px;
+  padding-top: 10rem;
   position: relative;
   color: #212121;
   background-color: #fdf2e9;
 }
 
-.home-logo a, 
+.home-logo a {
+  color: #f8efe0;
+  font-size: 3.2rem;
+}
+
 .home-logo a:visited {
   color: #f8efe0;
 }
@@ -51,11 +75,14 @@ nav {
   text-align: center;
 }
 
-nav a:link, nav a:visited {
-  padding-right: 50px;
+nav a:link {
+  padding-right: 5rem;
   color: #f8efe0;
 }
 
+nav a:visited {
+  color: #f8efe0;
+}
 nav a:hover {
   color: rgba(241, 225, 197, 0.767);
 }
@@ -66,7 +93,7 @@ nav a:link:last-child {
 
 .main-header {
   background-color: #212121;
-  padding: 8px;
+  padding: 0.8rem;
   text-align: left;
 
   text-transform: capitalize;
@@ -91,27 +118,28 @@ a:visited {
 }
 
 .hero {
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-top: 2rem;
   margin: auto;
-  width: 1300px;
-  column-gap: 100px;
+  max-width: 130rem;
+  column-gap: 10rem;
 }
 
 .hero-text-box {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  justify-content: center;
   justify-items: center;
-  text-align: left;
+  text-align: center;
   align-items: center;
+  padding: 0 20rem;
+  margin-bottom: 3rem;
 }
+
 .heading-primary {
-  font-size: 50px;
+  font-size: 5rem;
 }
+
 .hero-description {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .hero-img-box {
@@ -119,6 +147,9 @@ a:visited {
 }
 
 .welcome-img {
-  width: 600px;
+  max-width: 60rem;
   justify-content: center;
+  border-radius: 2rem;
 }
+
+
