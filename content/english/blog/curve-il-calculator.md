@@ -8,7 +8,7 @@ math: true
 ---
 
 There are various published impermanent loss calculators, yet there is none for
-the Curve’s StableSwap pools. Because StableSwap pools work with a different
+Curve’s StableSwap pools. Because StableSwap pools work with a different
 methodology and are based on a different formula, traditional impermanent loss
 calculators do not work on Curve’s StableSwap pools. As Dives Research, we have
 developed an open-source app to calculate the impermanent loss on StableSwap
@@ -18,7 +18,8 @@ StableSwap pools.
 
 # 1. What is Impermanent Loss?
 
-Impermanent loss is one of the risks of being a liquidity provider in certain DeFi protocols. It is the difference between the value the tokens would have if you provided liquidity and the value the tokens would have if you held them without providing liquidity. 
+Impermanent loss is one of the risks of being a liquidity provider in certain
+DeFi protocols. It is the difference between the value the tokens would have if you provided liquidity and the value the tokens would have if you held them without providing liquidity. 
 
 When you provide liquidity to a pool, you allow people to trade between the assets you have provided. When the value of an asset increases, people will use your liquidity to buy that asset. Therefore, the amount of the asset that gained value will decrease, while the amount of the asset that lost value will increase. This means the combined value of the assets would be higher if they were not in a liquidity pool. Therefore whenever a price change occurs, there will be an impermanent loss.
 
