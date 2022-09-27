@@ -1,6 +1,22 @@
-<head>
-    <meta charset="UTF-8" />
-    <title>Dives Research</title>
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/style.css" />
-    {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
-</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dives Research</title>
+        <link 
+            rel="stylesheet" 
+            href="{{ .Site.BaseURL }}/style.css?v=<?=filemtime('style.css') ?>"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <style></style>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@600&display=swap"
+          rel="stylesheet"
+        />
+        {{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
+    </head>

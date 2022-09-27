@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Dives Research</title>
-        <link 
-            rel="stylesheet" 
-            href="{{ .Site.BaseURL }}/style.css?v=<?=filemtime('style.css') ?>"
-        />
-    </head>
+{{ partial "head.html" . }}
     <body>
     {{ partial "header.html" . }}
     <div class="container">
