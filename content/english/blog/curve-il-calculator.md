@@ -11,7 +11,8 @@ There are various published impermanent loss calculators, yet there is none for
 Curve’s StableSwap pools. Because StableSwap pools work with a different
 methodology and are based on a different formula, traditional impermanent loss
 calculators do not work on Curve’s StableSwap pools. As Dives Research, we have
-developed an open-source app to calculate the impermanent loss on StableSwap
+developed an open-source app, [Curve IL Calculator](https://dives.fyi/apps/calculator/), 
+to calculate the impermanent loss on StableSwap
 pools. We are not affiliated with Curve Finance in any way and developed the app
 voluntarily. This article explains how we calculate the impermanent loss on
 StableSwap pools. 
