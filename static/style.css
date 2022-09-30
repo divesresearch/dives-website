@@ -163,6 +163,10 @@ blockquote {
 }
 
 
+.author-bar:last-child {
+    margin-bottom: 1rem;
+}
+
 .author-description {
   text-align: center;
 }
