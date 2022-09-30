@@ -19,8 +19,9 @@
             {{ .Params.description }}            
           </p>
           <div class="author-buttons">
-            <a href="#" class="fa fa-github"></a>
-            <a href="#" class="fa fa-twitter"></a>
+            {{ range $k, $v := .Params.Sites }}
+                <a href="{{ $v }}" class="fa fa-{{ $k }}"></a>
+            {{ end }} 
           </div>
         {{ end }}
     </div>
