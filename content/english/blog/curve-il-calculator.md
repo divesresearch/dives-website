@@ -11,7 +11,8 @@ There are various published impermanent loss calculators, yet there is none for
 Curve’s StableSwap pools. Because StableSwap pools work with a different
 methodology and are based on a different formula, traditional impermanent loss
 calculators do not work on Curve’s StableSwap pools. As Dives Research, we have
-developed an open-source app to calculate the impermanent loss on StableSwap
+developed an open-source app, [Curve IL
+Calculator](https://dives.fyi/apps/calculator), to calculate the impermanent loss on StableSwap
 pools. We are not affiliated with Curve Finance in any way and developed the app
 voluntarily. This article explains how we calculate the impermanent loss on
 StableSwap pools. 
@@ -84,7 +85,7 @@ depend on $D$. We can see this by creating a graph of this simplified equation.
 In this graph, changing $D$ moves the graph on the $x = y$ line, but it does not
 change the shape of the curve.
 
-![](https://media.giphy.com/media/Osi9vlm6C9nPD6zzbm/giphy.gif#center)
+![](/img/curve-il-calculator/first_d.gif)
 
 
 For a more rigorous demonstration, suppose we multiply $D$ with a constant $v$.
@@ -112,7 +113,7 @@ curve. When $A = 0$, the StableSwap pool works exactly like a Uniswap pool. When
 we make $A$ greater, the middle of the curve gets straightened. We can see this
 in the following graph:
 
-![](https://media.giphy.com/media/LVYuej8rk9aHbPlMZf/giphy.gif#center)
+![](/img/curve-il-calculator/second_a.gif)
 
 For a more detailed understanding of how the StableSwap formula works, refer to [Curve’s StableSwap Paper](https://curve.fi/files/stableswap-paper.pdf).
 
@@ -156,7 +157,7 @@ As discussed in **Section 3**, we need to find a way to derive the ratio of the 
 Instead of solving the equations, we can calculate the intersection of the two equations with whatever precision we want. Finding this intersection is what our calculator does. After finding the values $x$ and $y$, we can easily calculate the impermanent loss.
 
 Suppose we want to calculate the impermanent loss in a StableSwap pool. We have
-two relative prices: $p_i$ (initial price) and $p_f$ ([final](final) price) If we deposit
+two relative prices: $p_i$ (initial price) and $p_f$ (final price). If we deposit
 our tokens when the price is $p_i$, and the price changes to $p_f$, how much is the impermanent loss?
 
 We can calculate the values of tokens if they are not deposited to the pool by
