@@ -22,8 +22,10 @@
 
 p,
 li,
-a {
+a,
+h1, h2, h3, h4{
   font-family: neue;
+  font-size: 1.2rem;
 }
 
 body {
@@ -210,20 +212,17 @@ img[src*='#center']{
   height: auto;
 }
 
-
 .hero {
   display: flex;
-  height: 70vh;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   flex-direction: column;
   padding-top: 1rem;
-  margin: auto;
   max-width: 65rem;
-  column-gap: 5rem;
   text-align: center;
   align-items: center;
 }
-
 
 .heading-primary {
   font-size: 2.5rem;
@@ -240,6 +239,7 @@ img[src*='#center']{
     margin: auto 0;
 
 }
+
 .hero-welcome-img {
     width: 75%;
     min-width: 280px;
