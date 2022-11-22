@@ -213,7 +213,8 @@ requirement for them anyways.
 # Conclusion
 
 While using TypeScript might be preferable in certain cases, it comes with costs
-as well. Keep those costs in mind whenever you intend to use TypeScript.
+as well. Keep those costs in mind whenever you are considering to whether or not
+to use TypeScript.
 
 # References
 
