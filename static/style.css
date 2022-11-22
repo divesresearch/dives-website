@@ -25,7 +25,6 @@ li,
 a,
 h1, h2, h3, h4{
   font-family: neue;
-  font-size: 1.2rem;
 }
 
 body {
@@ -96,6 +95,7 @@ article h1, article h2, article h3, article h4 {
   font-family: "Clash Grotesk", sans-serif;
   margin-bottom: 1rem;
 }
+
 .post-header {
   font-weight: 4000;
   text-transform: initial;
@@ -124,12 +124,10 @@ ul {
 }
 
 li {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
+    list-style-position: inside;
 }
 
-li:last-child {
-  margin-bottom: 0;
-}
 
 p {
   text-align: left;
@@ -148,6 +146,12 @@ a:visited {
 
 blockquote {
     padding-left: 2rem;
+}
+
+.highlight pre {
+    padding: 1rem;
+    margin: 1rem;
+    overflow-x: auto;
 }
 
 
