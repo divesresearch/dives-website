@@ -1,6 +1,8 @@
 ---
-title: Should you use Typescript?
-authors: ['ugur']
+title: "Should you use TypeScript?"
+date: 2022-11-22
+authors: [ugur]
+draft: false
 ---
 
 Just as JavaScript, TypeScript gets more and more attention as each day passes.
@@ -95,7 +97,7 @@ you are forced to use types for the entire project when you only need it for a
 small part of it.
 
 If you are OK with writing types for all the variables and objects in the
-project, than you can choose to go with typescript, but if only a small portion
+project, then you can choose to go with typescript, but if only a small portion
 of your codebase requires such a tidiness, it might be better for you to just
 come up with a similar solution as mentioned above.
 
