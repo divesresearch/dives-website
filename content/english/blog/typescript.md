@@ -16,7 +16,7 @@ me explain you my reasoning.
 
 # So, should we use it or not?
 
-TLDR: Depends, but most probably you don't need it!
+TLDR: Depends on what you do, but most probably you don't need it!
 
 Why?
 
@@ -32,10 +32,10 @@ belongs to them.
 
 I am not aware of any methodical research comparing typescript and javascript
 when it comes to productivity (if you know one, please let me know). Which means
-that the best we can do is to go over some of the most popular arguments
-regarding the matter. I will first examine some of the usual claims that are
-presented for the sake of using typescript, and then provide some reasons about
-why one still might not want to use it.
+that the best we can do is to go over some of the most popular claims regarding
+the matter. I will first examine some of the usual claims that are presented for
+the sake of using typescript, and then provide some reasons about why one still
+might not want to use it.
 
 # Why use TypeScript?
 
@@ -166,6 +166,21 @@ Are similar tools available for vanilla javascript as well? Is eslint +
 autocomplete plugins + ES6 inference-capable tools not sufficient for your
 workflow?
 
+## 5. Types Provide a Good User Interface
+
+I completely agree with this point.
+
+The one thing I like about projects built using TypeScript is that they usually
+have greate using experience. You can easily see the types of inputs and outputs
+from documentation, or even look from the source code itself.
+
+I believe that the effort and time spent building a typed interface justifies
+itself since it pays off with the user experience (in this case, developers that
+use the library).
+
+So using Typescript is perfectly fine when building public libraries that are to be
+used by many people which are not supposed to exactly understand what's going on
+under the functions they use.
 
 # Cons of TypeScript
 
@@ -212,9 +227,9 @@ requirement for them anyways.
 
 # Conclusion
 
-While using TypeScript might be preferable in certain cases, it comes with costs
-as well. Keep those costs in mind whenever you are considering to whether or not
-to use TypeScript.
+While using TypeScript might be preferable in certain cases like building public
+libraries, it also comes with certain costs as well. Keep those costs in mind
+whenever you are considering whether or not to use TypeScript.
 
 # References
 
