@@ -1,9 +1,0 @@
----
-title: ibrahim
-fullname: "İbrahim Karakoç"
-sites: 
-    github: "https://github.com/ignatyus"
-    twitter: "https://twitter.com/excerebri"
-description: ""
----
-
