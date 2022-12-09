@@ -12,8 +12,6 @@
   padding: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .title {
@@ -153,9 +151,9 @@ blockquote {
 }
 
 .highlight pre {
-  padding: 1rem;
-  margin: 1rem;
-  overflow-x: auto;
+    padding: 1rem;
+    margin: 1rem;
+    overflow-x: auto;
 }
 
 .author-bar {
