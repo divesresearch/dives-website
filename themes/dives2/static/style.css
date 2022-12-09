@@ -14,10 +14,9 @@
   letter-spacing: 1px;
 }
 
-
 .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 p,
@@ -34,7 +33,7 @@ body {
 }
 
 .home-logo a,
-.home-logo a:visited  {
+.home-logo a:visited {
   color: rgb(248, 239, 224);
 }
 
@@ -90,7 +89,10 @@ article {
   border: #9b94943d solid 1px;
 }
 
-article h1, article h2, article h3, article h4 {
+article h1,
+article h2,
+article h3,
+article h4 {
   font-family: "Clash Grotesk", sans-serif;
   margin-bottom: 1rem;
 }
@@ -102,11 +104,9 @@ article h1, article h2, article h3, article h4 {
   position: relative;
 }
 
-
 .post-date {
   margin-bottom: 0;
 }
-
 
 .welcome-img {
   margin-bottom: 2rem;
@@ -117,8 +117,8 @@ article h1, article h2, article h3, article h4 {
 }
 
 ul {
-    margin-bottom: 2rem;
-    padding-left: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
 }
 
 li {
@@ -145,9 +145,8 @@ a:visited {
 }
 
 blockquote {
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
-
 
 .author-bar {
   display: inline-block;
@@ -161,7 +160,6 @@ blockquote {
   border-radius: 1rem;
   border: #9b94943d solid 1px;
 }
-
 
 .author-description {
   text-align: center;
@@ -189,23 +187,21 @@ blockquote {
 }
 
 .fa-github:before,
-.fa-twitter:before  {
+.fa-twitter:before {
   font-size: 2rem;
 }
 
-
 img {
-    max-width: 100%;
-    border-radius: 1rem;
+  max-width: 100%;
+  border-radius: 1rem;
 }
 
-img[src*='#center']{
+img[src*="#center"] {
   display: block;
-  margin: 1.0rem auto;
+  margin: 1rem auto;
   max-width: 100%;
   height: auto;
 }
-
 
 .hero {
   display: flex;
@@ -220,25 +216,21 @@ img[src*='#center']{
   align-items: center;
 }
 
-
 .heading-primary {
   font-size: 2.5rem;
 }
 
 .hero-description {
-    margin-top: 2rem;
-    font-size:1.5rem;
-    text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .hero-img-box {
-    text-align: center;
-    margin: auto 0;
-
+  text-align: center;
+  margin: auto 0;
 }
 .hero-welcome-img {
-    width: 75%;
-    min-width: 280px;
+  width: 75%;
+  min-width: 280px;
 }
-
-
