@@ -12,6 +12,8 @@
   padding: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .title {
@@ -44,7 +46,6 @@ body {
 .main-header {
   position: fixed;
   top: 0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -264,5 +265,9 @@ img[src*="#center"] {
 
   .editor-bar {
     margin-left: 0px;
+  }
+
+  .container {
+    max-width: 100%;
   }
 }
