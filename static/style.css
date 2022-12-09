@@ -60,10 +60,11 @@ body {
 
 nav {
   text-align: center;
+  display: flex;
+  gap: 30px;
 }
 
 nav a:link {
-  padding-right: 2.5rem;
   color: #f8efe0;
   text-align: left;
 }
@@ -76,7 +77,7 @@ nav a:hover {
 }
 
 nav a:link:last-child {
-  margin-right: 0px;
+  margin-right: 20px;
 }
 
 .container {
