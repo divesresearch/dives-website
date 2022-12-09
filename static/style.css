@@ -14,16 +14,18 @@
   letter-spacing: 1px;
 }
 
-
 .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 p,
 li,
 a,
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   font-family: neue;
 }
 
@@ -35,7 +37,7 @@ body {
 }
 
 .home-logo a,
-.home-logo a:visited  {
+.home-logo a:visited {
   color: rgb(248, 239, 224);
 }
 
@@ -91,7 +93,10 @@ article {
   border: #9b94943d solid 1px;
 }
 
-article h1, article h2, article h3, article h4 {
+article h1,
+article h2,
+article h3,
+article h4 {
   font-family: "Clash Grotesk", sans-serif;
   margin-bottom: 1rem;
 }
@@ -104,11 +109,9 @@ article h1, article h2, article h3, article h4 {
   position: relative;
 }
 
-
 .post-date {
   margin-bottom: 0;
 }
-
 
 .welcome-img {
   margin-bottom: 2rem;
@@ -119,15 +122,14 @@ article h1, article h2, article h3, article h4 {
 }
 
 ul {
-    margin-bottom: 2rem;
-    padding-left: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
 }
 
 li {
-    margin-bottom: 1rem;
-    list-style-position: inside;
+  margin-bottom: 1rem;
+  list-style-position: inside;
 }
-
 
 p {
   text-align: left;
@@ -145,15 +147,14 @@ a:visited {
 }
 
 blockquote {
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .highlight pre {
-    padding: 1rem;
-    margin: 1rem;
-    overflow-x: auto;
+  padding: 1rem;
+  margin: 1rem;
+  overflow-x: auto;
 }
-
 
 .author-bar {
   display: inline-block;
@@ -167,10 +168,16 @@ blockquote {
   border-radius: 1rem;
   border: #9b94943d solid 1px;
 }
+.editor-bar {
+  margin-left: 10px;
+}
 
+.author-bar > h1 {
+  margin-bottom: 1rem;
+}
 
 .author-bar:last-child {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .author-description {
@@ -199,19 +206,18 @@ blockquote {
 }
 
 .fa-github:before,
-.fa-twitter:before  {
+.fa-twitter:before {
   font-size: 2rem;
 }
 
-
 img {
-    max-width: 100%;
-    border-radius: 1rem;
+  max-width: 100%;
+  border-radius: 1rem;
 }
 
-img[src*='#center']{
+img[src*="#center"] {
   display: block;
-  margin: 1.0rem auto;
+  margin: 1rem auto;
   max-width: 100%;
   height: auto;
 }
@@ -233,20 +239,30 @@ img[src*='#center']{
 }
 
 .hero-description {
-    margin-top: 2rem;
-    font-size:1.5rem;
-    text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .hero-img-box {
-    text-align: center;
-    margin: auto 0;
-
+  text-align: center;
+  margin: auto 0;
 }
 
 .hero-welcome-img {
-    width: 75%;
-    min-width: 280px;
+  width: 75%;
+  min-width: 280px;
 }
 
+@media only screen and (max-width: 600px) {
+  article {
+    padding: 1.5rem;
+  }
+  p {
+    font-size: 17px;
+  }
 
+  .editor-bar {
+    margin-left: 0px;
+  }
+}
