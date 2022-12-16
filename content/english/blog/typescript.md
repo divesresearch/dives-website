@@ -5,37 +5,29 @@ authors: [ugur]
 draft: false
 ---
 
-Just as JavaScript, TypeScript gets more and more attention as each day passes.
+TypeScript is a programming language that is a superset of JavaScript, meaning
+it supports all of the features of JavaScript but also includes additional
+features.
+
+Just like JavaScript, TypeScript gets more and more attention as each day passes.
 Here is a google trends chart of the keyword TypeScript:
 
-![trends](/img/typescript/trends.png)
+![trends](/img/TypeScript/trends.png)
 
-We especially see a breakthrough in terms of interest after 2022. Does this
-mean that you should get into the TypeScript train as well? Probably not. Let
-me explain you my reasoning.
+You can see an important increase in interest in TypeScript, particularly after
+2022. So should you get into the TypeScript train as well?
 
-# So, should we use it or not?
+In this essay, I will examine the potential benefits and drawbacks of using
+TypeScript in different contexts. The decision of whether or not to use
+TypeScript will depend on the specific needs of the project at hand. I will
+argue that, in most cases, those specific needs of a project will not justify
+the use of TypeScript, unless it is being used for a specific purpose, such as
+building a public library.
 
-TLDR: Depends on what you do, but most probably you don't need it!
-
-Why?
-
-When deciding whether to use a tool or not, it is important to ask whether or
-not we can solve the problem at hand with a less complex, more direct approach
-without using the tool that is suggested. If someone says that "you should use
-X" to solve a problem, you should always ask: "What is the problem with the
-current tools we have, and what does this tool you mention provides in addition
-to our initial tool so that it justifies adding additional complexity/dependency
-to our stack?" In essence, if someone is claiming that you should use typescript
-because it is more productive compared to javascript, the the burden of proof
-belongs to them.
-
-I am not aware of any methodical research comparing typescript and javascript
-when it comes to productivity (if you know one, please let me know). Which means
-that the best we can do is to go over some of the most popular claims regarding
-the matter. I will first examine some of the usual claims that are presented for
-the sake of using typescript, and then provide some reasons about why one still
+I will first examine and conclude whether some of the usual claims are presented
+for the sake of using TypeScript and then provide some reasons why one still
 might not want to use it.
+why one still might not want to use it.
 
 # Why use TypeScript?
 
@@ -43,10 +35,10 @@ might not want to use it.
 
 This is one of the most popular claims for why you should use TypeScript.
 
-Types does not reduce all kinds of bugs. Types reduce type-bugs. Which is only a
+Types do not reduce all kinds of bugs. Types reduce type-bugs. Which is only a
 very small portion of actual bugs. If using statically typed language would be
 sufficient to reduce bugs, then we would see programs written in typed languages
-having less bugs in general. But we don't. ([see](https://labs.ig.com/static-typing-promise))
+having fewer bugs in general. But we don’t. ([see](https://labs.ig.com/static-typing-promise))
 
 In many cases bugs seems to occur not because of just being typless, but more
 probably, a complex design combined with lack of a proper testing paradigm. If
@@ -54,17 +46,17 @@ you want to be sure that your program won't collapse during runtime, then it's
 better for you to use a TDD (or a similar) approach combined with code reviews.
 This will reduce other kinds of bugs alongside with type-bugs.
 
-But still, if type constraints will make it less likely to bugs to occur, what's
-the harm of using a typed language anyways? Well, I agree that if you are working
-on a project and it has REALLY REALLY important parts, it might be a good idea
-to restrain certain functions with working certain types of input and
-output. However keep in mind that you can still implement certain type of type
-constraining mechanisms on JavaScript depending on your needs.
+But still, if type constraints will make it less likely for bugs to occur,
+what’s the harm of using a typed language anyways? Well, I agree that if you are
+working on a project and it has important parts, it might be a good idea to
+restrain certain functions by working on certain types of input and output.
+However, keep in mind that you can still implement a certain type of type
+constraining mechanism on JavaScript depending on your needs.
 
-Here is a very simple example of a way to create functions that checks whether
+Here is a very simple example of a way to create functions that check whether
 the given inputs satisfy certain properties by Eric Elliot.
 
-```javascript
+```JavaScript
 const fn = (fn, {required = []}) => (params = {}) => {
   const missing = required.filter(param => !(param in params));
 
@@ -91,13 +83,13 @@ createEmployee(); // createEmployee() Missing required parameter(s): name
 ```
 
 Principally you can extend `fn` or come up with similar solutions in any way to
-satisfy your needs. This might seem like an uggly solution at first but also
+satisfy your needs. This might seem like an ugly solution at first but also
 keep in mind that it might be better than putting yourself in a position where
-you are forced to use types for the entire project when you only need it for a
+you are forced to use types for the entire project when you only need them for a
 small part of it.
 
 If you are OK with writing types for all the variables and objects in the
-project, then you can choose to go with typescript, but if only a small portion
+project, then you can choose to go with TypeScript, but if only a small portion
 of your codebase requires such a tidiness, it might be better for you to just
 come up with a similar solution as mentioned above.
 
@@ -109,31 +101,31 @@ outputs for a function are supposed to be. Type constraints, in a way, also
 serve the paradigm called 'Code as Documentation' which frees you from the
 liability of writing documents.
 
-So what's the problem? The problem is that most of the time, types also adds a
+So what's the problem? The problem is that most of the time, types also add a
 syntax noise to your code, that is, you are often FORCED to put redundant stuff
 in the code.
 
 Instead of just writing:
 
-```javascript
+```JavaScript
 let a = 5;
 ```
 
-you are now suppoed to write:
+you are now supposed to write:
 
-```typescript
+```TypeScript
 let a : number = 5;
 ```
 
-the latter, in any was is not more readable compared to the first one. Because
+the latter, in any way, is not more readable compared to the first one. Because
 the first one is already simple enough.
 
-You might say "Well, types does not improve readability when your types are
+You might say “Well, types do not improve readability when your types are
 simple, but when they are complex. In essence, types make your code more
-readable in projects that are at larger scale." I agree with this, but I also
+readable in projects that are at a larger scale.” I agree with this, but I also
 think that we should try to avoid such complexities as much as possible. That
-is, we should strive to build things in a so simple and an explicit manner so
-that a type is not a requirement for us anyways.
+is, we should strive to build things in a so simple and explicit manner so that
+a type is not a requirement for us anyways.
 
 ## 3. Big Companies are doing it
 
@@ -141,7 +133,7 @@ Here is a common way of thinking among some people: If TypeScript were bad, it
 would not be used by big tech companies. big tech companies use TypeScript,
 therefore TypeScript is not bad.
 
-This argumentation is wrong for two reasons:
+This argument is wrong for two reasons:
 
 Firstly, you are not a big company, which means your requirements are probably not the
 same as theirs.
@@ -154,86 +146,96 @@ where big companies won't choose the better technology.
 
 The claim is as follows: Static Typing makes it possible to use great developer
 tools that help us to become more productive such as jumping to definitions,
-automatic refactoring, type inference and suggestions etc.
+automatic refactoring, type inference, and suggestions, etc.
 
 While it is true that Static Typing and Typescript has usually more dev tool
-supports, there are two questions that are needed to be asked:
+supports, two questions are needed to be asked:
 
-Are these tools really make you more productive, or make you feel like you
-are more productive?
+Are these tools make you more productive, or make you feel like you are more
+productive?
 
-Are similar tools available for vanilla javascript as well? Is eslint +
+Are similar tools available for vanilla JavaScript as well? Is eslint +
 autocomplete plugins + ES6 inference-capable tools not sufficient for your
 workflow?
 
 ## 5. Types Provide a Good User Interface
 
-I completely agree with this point.
-
-The one thing I like about projects built using TypeScript is that they usually
-have greate using experience. You can easily see the types of inputs and outputs
-from documentation, or even look from the source code itself.
-
-I believe that the effort and time spent building a typed interface justifies
-itself since it pays off with the user experience (in this case, developers that
-use the library).
-
-So using Typescript is perfectly fine when building public libraries that are to be
-used by many people which are not supposed to exactly understand what's going on
-under the functions they use.
+I completely agree with the point that projects built using TypeScript often
+have a great user experience. This is because the effort and time spent building
+a typed interface pay off in the form of improved documentation and ease of
+understanding for developers who use the library. The use of TypeScript is
+especially beneficial when building public libraries that will be used by many
+people who may not have a deep understanding of the inner workings of the
+functions they are using. Overall, the use of TypeScript can greatly improve the
+user experience and is therefore a worthwhile investment when building libraries
+that will be widely used.
 
 # Cons of TypeScript
 
 ## 1. Typescript is not a Script
 
-Typescript is not actually a script. A script is a piece of code that is
-executed directly by another program called interpreter rather than the computer
+Typescript is not a script. A script is a piece of code that is executed
+directly by another program called an interpreter rather than the computer
 itself. In scripting languages, you do not need an additional step to compile
-the program in order to run it. For nodejs, you just write 'node program.js'
-where 'program.js' is the program you want to run. If you make a change on the
-program, then you don't need to compile and run it again, you just run it.
-However if you want to execute a typescript code, you first transpile it to
-javascript, and then run it. This adds an additional step to your workflow,
-which I personally don't like unless there is a HUGE benefit that justifies it.
+the program to run it. For nodejs, you just write ‘node program.js’ where
+‘program.js’ is the program you want to run. If you make a change to the
+program, then you don’t need to compile and run it again, you just run it.
+However, if you want to execute a TypeScript code, you first transpile it to
+JavaScript and then run it. This adds an additional step to your workflow, which
+I don’t like unless there is a HUGE benefit that justifies it.
 
 ## 2. Typed Javascript is still untyped
 
-TypeScript code transpiles into javascript code nevertheless, which means,
-although the source code you use have types, the actual code you run does not.
-This is where typescript differs from truly statically typed languages like C
+TypeScript code transpiles into JavaScript code nevertheless, which means,
+although the source code you use has types, the actual code you run does not.
+This is where TypeScript differs from truly statically typed languages like C
 and C++ where different variable types are stored differently in memory.
 
-Regardless of how carefull you design your types, there is always a chance that
+Regardless of how careful you design your types, there is always a chance that
 a different value type might be assigned on a variable and can cause runtime
-errors although typescript says its ok. Here is an interesting
+errors although TypeScript says it's okay. Here is an interesting
 [flood](https://twitter.com/devongovett/status/1157039444324577280?lang=en) by
 the creator of parcel.js.
 
 ## 3. Slow Development
 
 Will TypeScript make you more productive, or will it get in the way more than it
-helps? When writing programs only in javascript it is sufficient for you to come
-up with a solution and then build it. But in typescript, you also need to figure
+helps? When writing programs only in JavaScript it is sufficient for you to come
+up with a solution and then build it. But in TypeScript, you also need to figure
 out the types and type structures of the objects you are dealing with and tell
 it to your code. If you want to follow "best practices" regarding TypeScript
-this will mean that you will also spend good amount of time to how & where to
+this will mean that you will also spend a good amount of time on how & where to
 declare your types (this is generally true for most tools/paradigms).
 
 ## 4. Unnecessary Solutions
 
 Types should not be a prerequisite for writing good code. You should strive to
-build things in a so simple and an explicit manner so that a type is not a
+build things in a so simple and explicit manner so that a type is not a
 requirement for them anyways.
 
 # Conclusion
 
-While using TypeScript might be preferable in certain cases like building public
-libraries, it also comes with certain costs as well. Keep those costs in mind
-whenever you are considering whether or not to use TypeScript.
+When deciding whether to use a tool, it's important to consider whether a
+simpler, more direct approach can solve the problem without it. If someone
+suggests using tool X to solve a problem, you should ask what the current tools
+can't do and what tool X offers to justify adding complexity and dependencies.
+If someone claims that TypeScript is more productive than JavaScript, the burden
+of proof is on them.
+
+Without methodical research comparing TypeScript and JavaScript in terms of
+productivity (if you are aware of any relevant research, please let me know), we
+must rely on our reasoning to decide the best approach.
+
+Based on the arguments presented, it appears to me that using TypeScript is not
+necessary in many cases. While it may have benefits in specific situations like
+building public libraries, it also comes with costs to consider. It's important
+to weigh these costs against the specific needs of the project before deciding
+to use TypeScript. In essence, using TypeScript will depend on what you do, but
+most probably you don't need it!
 
 # References
 
-[You Might Not Need Typescript](https://medium.com/javascript-scene/you-might-not-need-typescript-or-static-types-aa7cb670a77b)  
-[The Schocking Secret About Static Types](https://medium.com/javascript-scene/the-shocking-secret-about-static-types-514d39bf30a3)  
-[Typescript is a waste of time, change my mind](https://dev.to/bettercodingacademy/typescript-is-a-waste-of-time-change-my-mind-pi8)  
+[You Might Not Need Typescript](https://medium.com/JavaScript-scene/you-might-not-need-TypeScript-or-static-types-aa7cb670a77b)  
+[The Schocking Secret About Static Types](https://medium.com/JavaScript-scene/the-shocking-secret-about-static-types-514d39bf30a3)  
+[Typescript is a waste of time, change my mind](https://dev.to/bettercodingacademy/TypeScript-is-a-waste-of-time-change-my-mind-pi8)  
 [Typescript is not a script](https://www.youtube.com/watch?v=AkiLPpQ-6Wg)
