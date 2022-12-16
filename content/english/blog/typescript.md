@@ -12,7 +12,7 @@ features.
 Just like JavaScript, TypeScript gets more and more attention as each day passes.
 Here is a google trends chart of the keyword TypeScript:
 
-![trends](/img/TypeScript/trends.png)
+![trends](/img/typescript/trends.png)
 
 You can see an important increase in interest in TypeScript, particularly after
 2022. So should you get into the TypeScript train as well?
