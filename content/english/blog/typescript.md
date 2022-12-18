@@ -27,7 +27,6 @@ building a public library.
 I will first examine and conclude whether some of the usual claims are presented
 for the sake of using TypeScript and then provide some reasons why one still
 might not want to use it.
-why one still might not want to use it.
 
 # Why use TypeScript?
 
@@ -230,8 +229,8 @@ Based on the arguments presented, it appears to me that using TypeScript is not
 necessary in many cases. While it may have benefits in specific situations like
 building public libraries, it also comes with costs to consider. It's important
 to weigh these costs against the specific needs of the project before deciding
-to use TypeScript. In essence, using TypeScript will depend on what you do, but
-most probably you don't need it!
+to use TypeScript. In essence, using TypeScript can be justified based on what
+you do, but most probably you don't need it!
 
 # References
 
