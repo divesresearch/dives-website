@@ -10,7 +10,7 @@
     <title>Dives Research</title>
     <link
       rel="stylesheet"
-      href="{{ .Site.BaseURL }}/style.css?v={{.Date.Unix}}"
+      href="https://dives.fyi/style.css?v=-62135596800"
     />
     <link
       rel="stylesheet"
@@ -31,6 +31,29 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@600&display=swap"
       rel="stylesheet"
     />
-    {{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
+    
   </head>
+</html>
+
+    <body>
+    <header class="main-header">
+  <h1 class="home-logo"><a href="https://dives.fyi"> Dives Research</a></h1>
+
+  <nav>
+    
+    <a href="/apps">Apps</a>
+    
+    <a href="/blog">Blog</a>
+    
+  </nav>
+</header>
+
+    <div class="container">
+        <article>
+            <ul></ul>
+        </article>
+    </div>
+
+    <footer> </footer>
+    </body>
 </html>

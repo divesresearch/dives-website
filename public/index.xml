@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dives Research</title>
+    <link>https://dives.fyi/</link>
+    <description>Recent content on Dives Research</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dives.fyi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should you use TypeScript?</title>
+      <link>https://dives.fyi/blog/typescript/</link>
+      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dives.fyi/blog/typescript/</guid>
+      <description>TypeScript is a programming language that is a superset of JavaScript, meaning it supports all of the features of JavaScript but also includes additional features.
+Just like JavaScript, TypeScript gets more and more attention as each day passes. Here is a google trends chart of the keyword TypeScript:
+You can see an important increase in interest in TypeScript, particularly after 2022. So should you get into the TypeScript train as well?</description>
+    </item>
+    
+    <item>
+      <title>Calculating Impermanent Loss on Curve’s StableSwap Pools</title>
+      <link>https://dives.fyi/blog/curve-il-calculator/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dives.fyi/blog/curve-il-calculator/</guid>
+      <description>There are various published impermanent loss calculators, yet there is none for Curve’s StableSwap pools. Because StableSwap pools work with a different methodology and are based on a different formula, traditional impermanent loss calculators do not work on Curve’s StableSwap pools. As Dives Research, we have developed an open-source app, Curve IL Calculator, to calculate the impermanent loss on StableSwap pools. We are not affiliated with Curve Finance in any way and developed the app voluntarily.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://dives.fyi/projects/</link>
+      <pubDate>Fri, 19 Aug 2022 17:38:02 +0300</pubDate>
+      
+      <guid>https://dives.fyi/projects/</guid>
+      <description>Here is a list of currently ongoing projects of the Dives Research alongside with their github repos</description>
+    </item>
+    
+    <item>
+      <title>Introducing Dives Research</title>
+      <link>https://dives.fyi/about/</link>
+      <pubDate>Thu, 11 Aug 2022 17:39:12 +0300</pubDate>
+      
+      <guid>https://dives.fyi/about/</guid>
+      <description>Introduction Dives Research is an organization that mainly focuses on analyzing blockchain ecosystems and the financial markets. Although the crypto trend over the recent years has taken the attention of the masses, it created huge trends with tons of projects that lack proper ideas and solutions. Seperating good projects from the bad ones is important more than ever, thus we aim to create detailed and specific publications that result from deep research of the concerning ideas.</description>
+    </item>
+    
+    <item>
+      <title>giray</title>
+      <link>https://dives.fyi/members/giray/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dives.fyi/members/giray/</guid>
+      <description>Dives Research Co-founder.</description>
+    </item>
+    
+    <item>
+      <title>ibrahim</title>
+      <link>https://dives.fyi/members/ibrahim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dives.fyi/members/ibrahim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ugur</title>
+      <link>https://dives.fyi/members/ugur/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dives.fyi/members/ugur/</guid>
+      <description>I am one of the co-founders of Dives Research. I am your typical CS nerd with a hacker attitude. Blockchain and fintech just happened to be two of my main focus areas for the past two years.</description>
+    </item>
+    
+  </channel>
+</rss>

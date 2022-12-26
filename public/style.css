@@ -360,7 +360,6 @@ img[src*="#center"] {
   margin: 0 auto;
   margin-top: 10rem;
   gap: 3rem;
-  padding-bottom: 4rem;
 }
 
 .social {
@@ -369,23 +368,14 @@ img[src*="#center"] {
   gap: 2rem;
   justify-content: center;
 }
-
 .social > a:visited,
 .social > a:before,
 .social > a:link {
   color: rgb(105, 114, 212);
 }
 
-.social__top {
+.social__bottom {
   margin-top: 6rem;
-  border-bottom: #212121 1px solid;
-  padding-bottom: 5rem;
-  margin-bottom: 7rem;
-}
-
-.announcemenents__background {
-  background-color: #f8f6ff;
-  padding-bottom: 8rem;
 }
 
 .announcements__app {
@@ -394,17 +384,15 @@ img[src*="#center"] {
   justify-content: center;
   padding-top: 10rem;
   gap: 5rem;
-  width: 80%;
+  background-color: #f8f6ff;
 }
 .announcements-app__img {
-  width: 120rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 70rem;
 }
-
-.app-title {
-  font-size: 5rem;
+.announcements__app > div > h2 {
   margin-top: 0;
   margin-bottom: 3rem;
+  font-weight: 500;
 }
 
 .flex {
@@ -412,16 +400,20 @@ img[src*="#center"] {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  border-bottom: #212121 1px solid;
+  padding-bottom: 5rem;
 }
 
-.contact {
-  text-align: center;
+.footer {
+  padding: 3rem;
+  background-color: #212121;
+  color: #fafafa;
 }
-
-.contact-title {
-  font-size: 5rem;
+.footer__container {
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 1rem;
 }
-
 @media only screen and (max-width: 600px) {
   article {
     padding: 1.5rem;

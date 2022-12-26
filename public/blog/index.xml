@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Dives Research</title>
+    <link>https://dives.fyi/blog/</link>
+    <description>Recent content in Blog on Dives Research</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dives.fyi/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should you use TypeScript?</title>
+      <link>https://dives.fyi/blog/typescript/</link>
+      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dives.fyi/blog/typescript/</guid>
+      <description>TypeScript is a programming language that is a superset of JavaScript, meaning it supports all of the features of JavaScript but also includes additional features.
+Just like JavaScript, TypeScript gets more and more attention as each day passes. Here is a google trends chart of the keyword TypeScript:
+You can see an important increase in interest in TypeScript, particularly after 2022. So should you get into the TypeScript train as well?</description>
+    </item>
+    
+    <item>
+      <title>Calculating Impermanent Loss on Curve’s StableSwap Pools</title>
+      <link>https://dives.fyi/blog/curve-il-calculator/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dives.fyi/blog/curve-il-calculator/</guid>
+      <description>There are various published impermanent loss calculators, yet there is none for Curve’s StableSwap pools. Because StableSwap pools work with a different methodology and are based on a different formula, traditional impermanent loss calculators do not work on Curve’s StableSwap pools. As Dives Research, we have developed an open-source app, Curve IL Calculator, to calculate the impermanent loss on StableSwap pools. We are not affiliated with Curve Finance in any way and developed the app voluntarily.</description>
+    </item>
+    
+  </channel>
+</rss>
