@@ -3,7 +3,7 @@
     
     {{ range .Params.Authors }} 
     <div class="author-bar">
-      <h1 style="margin-top: 1rem;"> Author </h1>
+      <h2 style="margin: 1rem;"> Author </h2>
         {{ $memberPATH := printf "/members/%s" . | printf "%s"}} 
         {{ with $.Site.GetPage $memberPATH }} 
         {{ $authorPage := .Params.Sites.Twitter }}
@@ -33,7 +33,7 @@
     <div></div>
     {{ range .Params.Editors }} 
     <div class="author-bar editor-bar">
-      <h1 style="margin-top: 1rem;"> Editor </h1>
+      <h2 style="margin: 1rem;"> Editor </h2>
         {{ $memberPATH := printf "/members/%s" . | printf "%s"}} 
         {{ with $.Site.GetPage $memberPATH }} 
         {{ $authorPage := .Params.Sites.Twitter }}

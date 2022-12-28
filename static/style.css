@@ -22,10 +22,6 @@ h1 {
   font-size: 3.6rem;
 }
 
-.title {
-  margin-bottom: 1rem;
-}
-
 p,
 li,
 a,
@@ -37,20 +33,26 @@ span {
   font-family: "Open Sans", sans-serif;
 }
 
-body {
+.index-body {
   position: relative;
   color: #212121;
   background-color: #fafafa;
   margin: 0 auto;
 }
 
-.home-logo a,
-.home-logo a:visited {
-  font-size: 3.2rem;
+body {
+  background-color: #18191a;
+  color: #e4e6eb;
 }
 
-.main-header {
-  position: fixed;
+.home-logo a,
+.home-logo a:visited {
+  font-size: 3rem;
+  color: #18191a;
+}
+
+.header {
+  position: sticky;
   top: 0;
   display: flex;
   align-items: center;
@@ -97,7 +99,7 @@ nav a:link:last-child {
 }
 
 article {
-  background-color: rgb(248, 239, 224);
+  background-color: #242526;
   margin-top: 3rem;
   padding: 3rem;
   border: transparent solid 0.1rem;
@@ -117,36 +119,16 @@ article h4 {
   margin-bottom: 0;
 }
 
-.welcome-img {
-  margin-bottom: 2rem;
-  width: 100%;
-  height: auto;
-  border: transparent solid;
-  border-radius: 1rem;
-}
-
-ul {
-  margin-bottom: 2rem;
-  padding-left: 2rem;
-}
-
-li {
-  margin-bottom: 1rem;
-  list-style-position: inside;
-}
-
 p {
   text-align: left;
   margin-bottom: 1rem;
 }
 
-a:link {
-  color: black;
-  text-decoration: none;
-}
-
+a:link,
+a:before,
 a:visited {
-  color: #212121;
+  color: rgb(105, 114, 212);
+  text-decoration: none;
 }
 
 blockquote {
@@ -162,12 +144,12 @@ blockquote {
 .author-bar {
   display: inline-block;
   box-sizing: border-box;
-  width: 45%;
+  width: 40%;
   min-width: 24rem;
   vertical-align: top;
   padding: 1rem;
   margin-top: 1rem;
-  background-color: rgb(248, 239, 224);
+  background-color: #212121;
   border-radius: 1rem;
   border: #9b94943d solid 0.1rem;
 }
@@ -188,8 +170,8 @@ blockquote {
 }
 
 .author-bar-photo {
-  width: 6rem;
-  border-radius: 3rem;
+  width: 8rem;
+  border-radius: 5rem;
   display: block;
   margin-bottom: 1rem;
 }
@@ -257,7 +239,7 @@ img[src*="#center"] {
   text-align: center;
   align-items: center;
   color: #212121;
-  padding: 13rem 0;
+  padding: 10rem 0;
 }
 
 .hero-container {
@@ -265,45 +247,35 @@ img[src*="#center"] {
   margin-top: 3.7rem;
 }
 
-.hero__buttons {
+.hero-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
-.button-74 {
-  background-color: #fafafa;
-  border: 2px solid #422800;
+.button-home {
+  background-color: #fff;
+  border: 2px solid #212121;
   border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
+  box-shadow: #212121 4px 4px 0 0;
+  color: #212121;
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
+  font-size: 1.8rem;
+  padding: 0 1.8rem;
+  line-height: 5.2rem;
   text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  width: 16rem;
 }
 
-.button-74:hover {
+.button-home:hover {
   background-color: #fff;
 }
 
-.button-74:active {
-  box-shadow: #422800 2px 2px 0 0;
+.button-home:active {
+  box-shadow: #212121 2px 2px 0 0;
   transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .serive4 {
-    min-width: 120px;
-    padding: 0 25px;
-  }
 }
 
 .heading-primary {
@@ -345,7 +317,7 @@ img[src*="#center"] {
   margin-bottom: 1rem;
 }
 
-.service__title {
+.service-title {
   font-weight: 600;
 }
 
@@ -363,32 +335,19 @@ img[src*="#center"] {
   padding-bottom: 4rem;
 }
 
-.social {
-  padding: 4rem 0;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.social > a:visited,
-.social > a:before,
-.social > a:link {
-  color: rgb(105, 114, 212);
-}
-
-.social__top {
+.social-top {
   margin-top: 6rem;
   border-bottom: #212121 1px solid;
   padding-bottom: 5rem;
   margin-bottom: 7rem;
 }
 
-.announcemenents__background {
+.announcemenents-background {
   background-color: #f8f6ff;
   padding-bottom: 8rem;
 }
 
-.announcements__app {
+.announcements-app {
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -396,7 +355,7 @@ img[src*="#center"] {
   gap: 5rem;
   width: 80%;
 }
-.announcements-app__img {
+.announcements-app-img {
   width: 120rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -406,20 +365,18 @@ img[src*="#center"] {
   margin-top: 0;
   margin-bottom: 3rem;
 }
+.social {
+  padding: 4rem 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
 
-.flex {
+.social-flex {
   margin-top: 3rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
-}
-
-.contact {
-  text-align: center;
-}
-
-.contact-title {
-  font-size: 5rem;
 }
 
 @media only screen and (max-width: 600px) {

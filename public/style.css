@@ -37,11 +37,16 @@ span {
   font-family: "Open Sans", sans-serif;
 }
 
-body {
+.index-body {
   position: relative;
   color: #212121;
   background-color: #fafafa;
   margin: 0 auto;
+}
+
+body {
+  background-color: #18191a;
+  color: #e4e6eb;
 }
 
 .home-logo a,
@@ -50,7 +55,7 @@ body {
 }
 
 .main-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   display: flex;
   align-items: center;
@@ -97,7 +102,7 @@ nav a:link:last-child {
 }
 
 article {
-  background-color: rgb(248, 239, 224);
+  background-color: #242526;
   margin-top: 3rem;
   padding: 3rem;
   border: transparent solid 0.1rem;
@@ -257,7 +262,7 @@ img[src*="#center"] {
   text-align: center;
   align-items: center;
   color: #212121;
-  padding: 13rem 0;
+  padding: 10rem 0;
 }
 
 .hero-container {
